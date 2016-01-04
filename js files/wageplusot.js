@@ -46,6 +46,6 @@ var hours = 40;
 var ot = 7
 var otpay = 1.5 * pay
 var total = (pay * hours) + (ot * otpay)
-total = addwage(pay, hours);
+total = addwage(pay, hours, ot, otpay);
 console.log(total);
 
