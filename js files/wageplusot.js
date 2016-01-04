@@ -18,9 +18,11 @@ var workerbhours;
 var otpay;
 var othour;
 var workerbtotal;
+var workerbhoursadj;
 
 workerbpay = 23.43;
 workerbhours = 47;
+workerbhoursadj = workerbhours - othour;
 
 
 
@@ -32,6 +34,7 @@ workerbtotal = (workerbpay * workerbhours) + (otpay * othour)
 
 console.log("workerbpay=", workerbpay);
 console.log("workerbhours=", workerbhours);
+console.log("(workerbhours - othour)=", workerbhoursadj);
 console.log("otpay=", otpay);
 console.log("othour=", othour);
-console.log("(workerbpay * workerbhours) + (otpay * othour)", workerbtotal);
+console.log("(workerbpay * workerbhours) + (otpay * othour)=", workerbtotal);
