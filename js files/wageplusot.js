@@ -32,16 +32,20 @@ console.log("otpay=", otpay);
 console.log("othour=", othour);
 console.log("(workerbpay * 40) + (otpay * othour)=", workerbtotal);
 
-function addwage(pay,hours){
-	var hours = prompt ("Please enter hours", " ");
+function addwage(pay,hours,ot,otpay){
+	var hours = prompt ("Please enter hours", "Enter Hours");
 	var pay = 23.43;
-	var result = hours * pay;
+	var ot = prompt ("Please enter OT hours", "Enter OT Hours");
+	var otpay = pay * 1.5;
+	var result = (hours * pay) + (ot * otpay);
 	return result;
 	}
 
 var pay = 23.43;
 var hours = 40;
-var total = pay * hours;
+var ot = 7
+var otpay = 1.5 * pay
+var total = (pay * hours) + (ot * otpay)
 total = addwage(pay, hours);
 console.log(total);
 
