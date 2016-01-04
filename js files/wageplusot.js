@@ -36,7 +36,6 @@ function addwage(pay,hours){
 	var hours = prompt ("Please enter hours", " ");
 	var pay = 23.43;
 	var result = hours * pay;
-	result = pay * hours;
 	return result;
 	}
 
