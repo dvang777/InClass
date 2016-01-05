@@ -32,24 +32,32 @@ console.log("otpay=", otpay);
 console.log("othour=", othour);
 console.log("(workerbpay * 40) + (otpay * othour)=", workerbtotal);
 
-function addwage(regpay,otpay){
-	var result
-	result = regpay + otpay;
+function regwage(reghours,regpay){
+	var regwage;
+	regwage = reghours * regpay;
+	return regwage;
+    }
+var reghours = 40;
+var regpay = 23.43;
+var totalreg = regwage(reghours,regpay);
+console.log(totalreg); 
+
+function otwage(othours,otpay){
+	var totalot;
+	totalot = othours * otpay;
+	return totalot;
+    }
+var othours = 7;
+var otpay = 1.5 * 23.43;
+var totalot= otwage(othours,otpay)
+console.log(totalot);
+
+function totalwage(regwage,otwage){
+	var result;
+	result = regwage + otwage;
 	return result;
 	}
-
-var pay;
-var hours;
-var ot;
-var otpay;
-var regpay;
-var total;
-pay = 23.43;
-hours = prompt ("Enter Hours", "Enter Hours");
-ot = prompt ("Enter OT Hours", "Enter OT Hours");
-otpay = 1.5 * pay;
-regpay = pay * hours;
-otpay = ot * otpay;
-total = addwage(regpay,otpay);
-console.log(total);
-
+var regwage = regwage(reghours,regpay);
+var otwage = otwage(othours,otpay)
+var combinedwage = totalwage(regwage,otwage);
+console.log(combinedwage);
