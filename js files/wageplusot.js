@@ -49,7 +49,7 @@ function otwage(othours,otpay){
     }
 var othours = 7;
 var otpay = 1.5 * 23.43;
-var totalot= otwage(othours,otpay)
+var totalot= otwage(othours,otpay);
 console.log(totalot);
 
 function totalwage(regwage,otwage){
@@ -58,6 +58,6 @@ function totalwage(regwage,otwage){
 	return result;
 	}
 var regwage = regwage(reghours,regpay);
-var otwage = otwage(othours,otpay)
+var otwage = otwage(othours,otpay);
 var combinedwage = totalwage(regwage,otwage);
 console.log(combinedwage);
