@@ -2,4 +2,4 @@
 document.write("Daniel Vang")
 window.alert("Wisconsin")
 
-console.log(31)
+console.log(31,"Years Old")
