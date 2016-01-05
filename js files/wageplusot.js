@@ -54,7 +54,7 @@ var hoursO;
 var payO;
 var totalot;
 hoursO = 7;
-payO = 1.5 * 23.43;
+payO = 1.5 * pay;
 totalot = otwage(hoursO,payO);
 console.log("Over Time Pay", totalot);
 
