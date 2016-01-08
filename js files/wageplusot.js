@@ -32,7 +32,11 @@ console.log("otpay=", otpay);
 console.log("othour=", othour);
 console.log("(workerbpay * 40) + (otpay * othour)=", workerbtotal);
 
-
+function getUserInput(Message){
+	var userData;
+	userData = window.prompt(Message);
+	return userData;
+}
 function regwage(reghours,regpay){
 	var wage;
 	wage = reghours * regpay;
@@ -58,11 +62,11 @@ function main(){
 	var wageA;
 	var wageB;
 	var combinedwage;
-	hours = 40;
-	pay = 23.43;
+	hours = getUserInput("Enter Hours:");
+	pay = getUserInput ("Enter Pay:");
 	totalreg = regwage(hours,pay);
 	console.log("Regular Pay", totalreg);
-	hoursO = 7;
+	hoursO = getUserInput("Enter Overtime Hours:");
 	payO = 1.5 * pay;
 	totalot = otwage(hoursO,payO);
 	console.log("Over Time Pay", totalot);
