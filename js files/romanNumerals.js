@@ -20,18 +20,41 @@ function convertNumber(number){
     return numberInput;
 }
 
-function convertRoman(roman){
-    var romanInput = "";
-    var romanCharacter = ["M","CM","D","CD","C","XC","L","XL","X","IX","V","IV","I"];
-    var num = [1000,900,500,400,100,90,50,40,10,9,5,4,1];
+function convertRoman(){
+    var romans = {};
+    var result = 0;
+    var pos = 1;
+    var char = "";
+    var thisSum = "";
+    var nextchar = "";
 
-    for (var i = 0; i >= romanCharacter[i]; i--) {
-        while(roman >= romanCharacter[i]){
-            romanInput = romanInput - romanCharacter[i];
-            roman = roman + num[i];
-        }
-    }
-    return romanInput;
+    romans["I"] = 1;
+    romans["V"] = 5;
+    romans["X"] = 10;
+    romans["L"] = 50;
+    romans["C"] = 100;
+    romans["D"] = 500;
+    romans["M"] = 1000;
+
+    while(pos lte len(input)) {
+        char = mid(input, pos, 1);
+    if(pos != len(input)) {
+        nextchar = mid(input, pos+1, 1);
+    if(romans[char] < romans[nextchar]) {
+        thisSum = romans[nextchar] - romans[char];
+        result += thisSum;
+        pos+=2;
+}else{
+    result += romans[char];
+    pos++;
+}
+}else{
+    result += romans[char];
+    pos++;
+}
+}
+
+return result;
 }
 
 function main(){

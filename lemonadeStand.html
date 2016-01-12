@@ -9,20 +9,65 @@
         </head>
         <body>
         	<table>
+                <h2>Purchase Supplies:</h2>
+                <TR>
+                    <th>Cash Avaiable</th>
+                    
+                </TR>
+                <TR>
+                <div id="cash">15</div>
+                </TR>
         		<TR>
-        			<th>Weather Forecast</th>
-        			<th>Temperature</th>
-
+        			<th>How many paper cups?</th>
         		</TR>
         		<TR>
         			<td>
+                        <input type="text"id="cups">$.04 each.</input>
+                        <div id="cupInv">0</div>
+
+                        <script type="text/javascript0"></script>
         		     </td>
-        			<td>
-        			</td>
+                </TR>
+                <TR>
+                    <th>How many lemons?</th>
+                </TR>
+                <TR>
+                    <td>
+                        <input type="text"id="lemon">$.05 each.</input>
+                        <div id="lemonInv">0</div>
+                        <script type="text/javascript"></script>
+                    </td>
+                </TR>
+                <TR>
+                    <th>How many cups of sugar?</th>
+                </TR>
+                <TR>
+                    <td>
+                        <input type="text"id="sugar">$.04 each.</input>
+                        <div id="sugarInv">0</div>
+                        <script type="text/javascript"></script>
+                    </td>
+                </TR>
+                <TR>
+                    <th>How many ice cubes?</th>
+                </TR>
+                <TR>
+                    <td>
+                        <input type="text"id="ice">$.01 each.</input>
+                        <div id="iceInv">0</div>
+                    </td>
+                </TR>
+                <TR>
+                    
+                </TR>
 
         	</table>
 
         	<script type="text/javascript"src="js files/lemonadeStand.js"></script>
+            
+            <footer>
+                <button id="button" type="submit"onclick="function calcInventoryCost()">Purchase</button>
+            </footer>
         </body>
 
     </html>
