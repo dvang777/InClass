@@ -42,6 +42,18 @@ function getNewTemperature(temperature){
 		console.log(temperature);	
 	}
 }
+function getPrices(){
+	var costOfIce;
+	var costOfLemon;
+	var costOfSugar;
+	var costOfCups;
+
+	costOfIce = .01;
+	costOfLemon = .05;
+	costOfSugar = .05;
+	costOfCups = .04;
+
+}
 function getDays(numberOfDays){
 	var forecast;
 	var forecastDays = [];
@@ -50,22 +62,19 @@ function getDays(numberOfDays){
 	}
 	return boardLevels;   
 } 
-function getSupplies(){
-	var cups;
-	var lemon;
-	var sugar;
-	var ice;
-
-	cups = 0;
-	lemon = 0;
-	sugar = 0;
-	ice = 0;
-}
 function getCustomers(numberOfCustomers){
 	var randomCustomers;
-	randomCustomers = Math.floor((Math.random()*150) + 1);
+	randomCustomers = Math.floor((Math.random()*150) + 50);
 	return randomCustomers;
 }
 function main(){
-	var NumberOfDays = [];
+	var inputOfDays;
+	var numberOfDays = [];
+    var weather;
+    var highTemp;
+    
+    weather = getWeather();
+    highTemp = getNewTemperature();
+    inputOfDays = getUserInput("How many days will your lemonade stand open?","7");
+	numberOfDays = getDays(inputOfDays);
 }
