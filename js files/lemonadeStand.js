@@ -13,7 +13,7 @@ function calcPlayerCash(playerCash,inventory){
     var remainingCash;
     remainingCash = playerCash - inventory;  
     if(remainingCash > playerCash){  
-        alert("Over Limit!")  
+        alert("Over Limit!");  
     } return remainingCash;
 }
 function getRandomBetweenRange(min,max){
@@ -153,6 +153,9 @@ function playerTurn(day,playerCash){
     cupTotal = Math.floor(cupPurchase * cupPrice);
     while(cupTotal > playerCash){
         alert("Over Limit");
+        cupPurchase = getUserInput("How many glasses will you buy?");
+        console.log("How many glasses will you buy?");
+        cupTotal = Math.floor(cupPurchase * cupPrice);
     };
 
     currentCash = getRemainingCash(playerCash,cupTotal);
@@ -185,9 +188,7 @@ function main(){
   var turnAmount = startAmount; 
   for (var i = 0; i < daysOpen; ++i) {
     turnAmount = playerTurn(i, turnAmount);
-    while(turnAmount <= 0){
-        alert("Over Limit, You have no money left");
-    }
+
     alert("You have $ " + turnAmount);
     console.log("You have $ " + turnAmount);
 
