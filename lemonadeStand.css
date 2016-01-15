@@ -1,4 +1,26 @@
-table tr th{
-	text-align: left;
+.wrapper{
+	text-align: center;
+}
+.button{
+	position: absolute;
+	top: 50%;
+	background:url("images/lemon.jpg");
+	background-repeat: no-repeat;	
+}
+
+button {
+	vertical-align: center;
 
 }
+body {
+	background-image: url("images/Lemonade_Stand.jpg");
+	background-repeat: no-repeat;
+	background-position: 100px 5px;
+}
+h1 {
+	font-size: 40px;
+	font-family: impact;
+	text-align: right;
+
+}
+
